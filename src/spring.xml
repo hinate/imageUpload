@@ -88,44 +88,5 @@
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
 	</aop:config>
 	
-	<!--定时任务配置开始 -->
-	
-	<!--申请单过期作废开始   每天下午15点05分执行-->
-	<!-- <bean name="applyAutoExpiredJobService" class="com.hs.job.service.impl.ApplyAutoExpiredJobServiceImpl"/>
-	
-	<bean id="applyAutoExpiredJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		<property name="targetObject" ref="applyAutoExpiredJobService"/>
-		<property name="targetMethod" value="execute"/>
-	</bean> -->
-	
-	<!-- <bean id="applyAutoExpiredTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-		<property name="jobDetail" ref="applyAutoExpiredJobDetail"/>
-		<property name="cronExpression" value="0 05 15 * * ?"></property>
-	</bean> -->
-	<!--申请单过期作废结束-->
-	
-	<!--评价自动归档开始   每天凌晨01点10分执行-->
-	<!-- <bean name="evaluateAutoArchivedJobService" class="com.hs.job.service.impl.EvaluateAutoArchivedJobServiceImpl"/>
-	
-	<bean id="evaluateAutoArchivedJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		<property name="targetObject" ref="evaluateAutoArchivedJobService"/>
-		<property name="targetMethod" value="execute"/>
-	</bean> -->
-	
-	<!-- <bean id="evaluateAutoArchivedTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-		<property name="jobDetail" ref="evaluateAutoArchivedJobDetail"/>
-		<property name="cronExpression" value="0 10 01 * * ?"></property>
-	</bean> -->
-	
-	<!--评价自动归档结束-->
-	<!-- <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-		<property name="triggers">
-			<list>
-				<ref local="applyAutoExpiredTrigger"/>
-				<ref local="evaluateAutoArchivedTrigger"/>
-			</list>
-		</property>
-	</bean> -->
-	<!--定时任务配置结束 -->
 </beans>
 
