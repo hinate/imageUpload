@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="win.system.mapper.winUserMapper">
+	<resultMap type="win.system.entity.winUser"  id="userResult">
+	    <result column="ID" property="id"/>
+	    <result column="userName" property="user_name"/>
+	    <result column="password" property="password"/>
+	    <result column="email" property="email"/>
+	    <result column="timetamp" property="timetamp"/>
+
+	</resultMap>
+
+	<insert id="save" parameterType="win.system.entity.winUser">
+		INSERT INTO win_user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+
+			<if test="id!=null">id,</if>
+			<if test="userName!=null">user_name,</if>
+			<if test="password!=null">password,</if>
+			<if test="email!=null">email,</if>
+			<if test="timetamp!=null">timetamp,</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">#{id},</if>
+			<if test="userName!=null">#{userName},</if>
+			<if test="password!=null">#{password},</if>
+			<if test="email!=null">#{email},</if>
+			<if test="timetamp !=null">#{timetamp},</if>
+		</trim>
+	</insert>
+	<select id="findByname" resultMap="userResult" parameterType="java.lang.String">
+		select * from win_user where user_name =#{pacount}
+	</select>
+
+</mapper>

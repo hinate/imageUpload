@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            padding-top:50px;
+            background: url('/images/bg.jpg') 50% 0 repeat-y fixed;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        #content{
+            width:100%;
+            min-height:600px;
+
+            padding-top:20px;
+            color:#FFF;
+        }
+
+        .register{
+            padding: 20px;
+            font-weight:700;
+            border:#FFF solid 1px;
+            -moz-border-radius: 10px;      /* Gecko browsers */
+            -webkit-border-radius: 10px;   /* Webkit browsers */
+            border-radius:10px;            /* W3C syntax */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<!-- 注册表单开始 -->
+<div id="content">
+    <div class="container">
+        <form id="registerForm" action="" method="post" class="form-horizontal" >
+            <div class="row">
+                <h1 class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 page_title ">注册</h1>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 register">
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">用户名：</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="userName" id="username" placeholder="请输入用户名">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                        </div>
+                        <span id="username_error" style="color: #D23734"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">密码：</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码（六位以上）">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </div>
+                        </div>
+                        <span id="password_error" style="color: #D23734"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="chkpwd" class="col-sm-3 control-label">确认密码：</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <input type="password" class="form-control" name="chkpwd" id="chkpwd" placeholder="请确认密码">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            </div>
+                        </div>
+                        <span id="chkpwd_error" style="color: #D23734"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">邮箱：</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="请输入有效邮箱">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                            </div>
+                        </div>
+                        <span id="email_error" style="color: #D23734"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">验证码：</label>
+                    <div class="col-sm-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="authcode" id="authcode" placeholder="请输入验证码">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </div>
+                        </div>
+                        <span id="authcode_error" style="color: #D23734"></span>
+                    </div>
+                    <label for="authcode_img" class="control-label col-sm-1" style="padding-top: 0px;width:120px;">
+                        <button type="button" class="btn btn-default" id="authcode_img">获取验证码 </button>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3 col-xs-12">
+                        <button type="reset" class="btn btn-default btn-block"><b>&nbsp&nbsp清空&nbsp&nbsp</b>
+                        </button>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <button type="submit" class="btn btn-info btn-block" id="submitReg"><b>&nbsp&nbsp提交&nbsp&nbsp</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- 注册表单结束 -->
+<script src="js/jquery.min.js"></script>
+<script src="js/checkAll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

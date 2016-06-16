@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="win.winle.mapper.winImageMapper">
+	<resultMap type="win.winle.entity.winImage"  id="imageResult">
+	    <result column="ID" property="id"/>
+	    <result column="userId" property="user_id"/>
+	    <result column="imageUrl" property="image_url"/>
+	    <result column="url" property="url"/>
+	    <result column="imageSize" property="image_size"/>
+	    <result column="imageName" property="image_name"/>
+	    <result column="timetamp" property="timetamp"/>
+
+	</resultMap>
+
+	<insert id="save" parameterType="win.winle.entity.winImage">
+		INSERT INTO win_image
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+
+			<if test="id!=null">id,</if>
+			<if test="userId!=null">user_id,</if>
+			<if test="imageUrl!=null">image_url,</if>
+			<if test="url!=null">url,</if>
+			<if test="imageSize!=null">image_size,</if>
+			<if test="imageName!=null">image_name,</if>
+			<if test="timetamp!=null">timetamp,</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">#{id},</if>
+			<if test="userId!=null">#{userId},</if>
+			<if test="imageUrl!=null">#{imageUrl},</if>
+			<if test="url!=null">#{url},</if>
+			<if test="imageSize!=null">#{imageSize},</if>
+			<if test="imageName!=null">#{imageName},</if>
+			<if test="timetamp !=null">#{timetamp},</if>
+		</trim>
+	</insert>
+
+</mapper>
