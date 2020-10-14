@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <properties>
     <!-- spring版本号 -->
-    <spring.version>3.2.5.RELEASE</spring.version>
+    <spring.version>5.2.9.RELEASE</spring.version>
     <!-- mybatis版本号 -->
     <mybatis.version>3.2.2</mybatis.version>
 
@@ -76,7 +76,7 @@
       <dependency>
           <groupId>mysql</groupId>
           <artifactId>mysql-connector-java</artifactId>
-          <version>5.1.17</version>
+          <version>8.0.21</version>
       </dependency>
 
 
